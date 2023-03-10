@@ -19,7 +19,7 @@ EX_FAISS_SO = $(PRIV_DIR)/libex_faiss.so
 EX_FAISS_LIB_DIR = $(PRIV_DIR)/lib
 
 # Build flags
-CFLAGS = -I$(ERTS_INCLUDE_DIR) -I$(FAISS_DIR) -fPIC -O3 -shared -std=c++14
+CFLAGS = -I$(ERTS_INCLUDE_DIR) -I$(FAISS_DIR) -fPIC -O3 -shared -std=c++14 -fopenmp
 CMAKE_FLAGS = -DFAISS_ENABLE_PYTHON=OFF -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=ON
 
 ifeq ($(USE_CUDA), true)
